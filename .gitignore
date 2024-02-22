@@ -2,3 +2,4 @@ oauth-private.key
 oauth-public.key
 dist
 node_modules
+.env
