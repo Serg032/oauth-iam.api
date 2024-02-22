@@ -1,0 +1,96 @@
+
+type HotelGuest
+{
+    id: ID!
+    name: GraphQLString!
+    lastname: GraphQLString!
+    code: GraphQLString!
+    createdAt: GraphQLTimestamp
+    updatedAt: GraphQLTimestamp
+    deletedAt: GraphQLTimestamp
+}
+
+input HotelCreateGuestInput
+{
+    id: ID!
+    name: GraphQLString!
+    lastname: GraphQLString!
+    code: GraphQLString!
+}
+
+input HotelUpdateGuestByIdInput
+{
+    id: ID!
+    name: GraphQLString
+    lastname: GraphQLString
+    code: GraphQLString
+}
+
+input HotelUpdateGuestsInput
+{
+    id: ID
+    name: GraphQLString
+    lastname: GraphQLString
+    code: GraphQLString
+}
+
+type Query
+{
+    hotelFindGuest(
+        query: QueryStatement
+        constraint: QueryStatement
+    ): HotelGuest
+
+    hotelFindGuestById(
+        id: ID
+        constraint: QueryStatement
+    ): HotelGuest
+
+    hotelGetGuests(
+        query: QueryStatement
+        constraint: QueryStatement
+    ): [HotelGuest]!
+
+    hotelPaginateGuests(
+        query: QueryStatement
+        constraint: QueryStatement
+    ): Pagination!
+
+}
+
+type Mutation
+{
+    hotelCreateGuest(
+        payload: HotelCreateGuestInput!
+    ): HotelGuest
+
+    hotelCreateGuests(
+        payload: [HotelCreateGuestInput]!
+    ): Boolean!
+
+    hotelUpdateGuestById(
+        payload: HotelUpdateGuestByIdInput!
+        constraint: QueryStatement
+    ): HotelGuest
+
+    hotelUpdateGuests(
+        payload: HotelUpdateGuestsInput!
+        query: QueryStatement
+        constraint: QueryStatement
+    ): [HotelGuest]!
+
+    hotelUpsertGuest(
+        payload: HotelUpdateGuestByIdInput!
+    ): HotelGuest
+
+    hotelDeleteGuestById(
+        id: ID!
+        constraint: QueryStatement
+    ): HotelGuest
+
+    hotelDeleteGuests(
+        query: QueryStatement
+        constraint: QueryStatement
+    ): [HotelGuest]!
+
+}

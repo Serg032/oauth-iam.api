@@ -1,0 +1,561 @@
+{
+    "info": {
+		"_postman_id"   : "d9bc3afc-fd40-5505-b57f-8f5d5118e01b",
+		"name"          : "@app - hotel/guest",
+		"schema"        : "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+			"name": "GraphQL - hotelCreateGuest",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation ($payload:HotelCreateGuestInput!)\n{\n\thotelCreateGuest (payload:$payload)\n\t{\n\t\tid\n\t\tname\n\t\tlastname\n\t\tcode\n\t}\n}",
+                        "variables": "{\n\t\"payload\":\n\t{\n\t\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\t\"name\": \"Sleek Soft Chicken\", \n\t\t\"lastname\": \"h864knjnd5c5773db7ve1k5hklhb1fo4gvahkq53kcunygktrtdje2khhfftrw\", \n\t\t\"code\": \"xjhgd5maylvtlg37nr6ik3ykyxi5jthgkezvjlwq0xx6mz2arihqak015ljb8orl8uxm8bkc2v9gtagshhjuk4eh9qi1xws1nxorbm750vzc547l1l40stscjsx5qe\"\n\t}\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - hotelCreateGuests",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation ($payload:[HotelCreateGuestInput]!)\n{\n\thotelCreateGuests (payload:$payload)\n}",
+						"variables": "{\n\t\"payload\":\n\t[\n\t\t{\n\t\t\t\"id\": \"d6c25c86-cc5d-4242-9e02-87e639e72350\", \n\t\t\t\"name\": \"Handcrafted Steel Fish\", \n\t\t\t\"lastname\": \"ikrtzym0flnm6sjx5w7tft0lwe0jgxnjcp5vpyeqwgcue10qwaabuu2240g7r9\", \n\t\t\t\"code\": \"5k44u5lt2mwzjd6coek4syxapn96virpatihnw4bl6f14xbvgwvqrj7x9nnkkuqwug3ozu5si1g5greuxz66bor9l10cske5co2ainzw3xocq4bnwj6r2r9gnqv8qx\"\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"5493293e-1069-4993-af7d-04ea51b6509a\", \n\t\t\t\"name\": \"Handmade Plastic Bike\", \n\t\t\t\"lastname\": \"70e1rbuhwm0jx2o4ys7kufmc8gezd2hseo85p1w2ie737787p0yix0bhkjt8f3\", \n\t\t\t\"code\": \"bqcn7quessgijzun7js7dxdanzboevylwj0omjyipygqf1kohuxycanibf2palj4nnl63tqrg3b20zckavcd5f8ayh68164ryvfe7vvc6j6z974ugb0t48oytdpz2s\"\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"d84198e6-6087-4b04-8977-c9fcb3b3e5d0\", \n\t\t\t\"name\": \"Small Cotton Cheese\", \n\t\t\t\"lastname\": \"02zkc48brdaa89l912pg02s2d2vavec451q9pkeyr6lnbl6e3lhni4uwp0boee\", \n\t\t\t\"code\": \"1v6inkdggzx9w3gf13kydzu5juwrar65xt641ymkrw8afxu7oxj3wwadb0u2cufbsctu7h5homsoi8yqpbssugoa9382fxrpnyqwjqyuzrdagwl42zc2y0n6eag29o\"\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"adec6f33-77cc-4938-9a08-ba594508c3df\", \n\t\t\t\"name\": \"Sleek Fresh Towels\", \n\t\t\t\"lastname\": \"a2w6uonq1tkfn5thv4hz5ww2j9w3e5e64j8i8ezqjzc70kkppggcxui0cis98e\", \n\t\t\t\"code\": \"guhqnt1u9z35qefzy7m8oyngbda4ao03jup47djdlx0v7ne1bc6hs5572nb34o5c6evexci6xgl6abyahqnflhwxo8cyuyphfl4omowhioh21qa3q6jgwtcj9s58r0\"\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"e01abe0a-fb45-478e-8938-d6cbf034913e\", \n\t\t\t\"name\": \"Small Soft Fish\", \n\t\t\t\"lastname\": \"gxcqss9ug39gjjxtemslbd6s0eefxpyfnzc7c4dyzoad4zttolqkxzmieyafvy\", \n\t\t\t\"code\": \"4x2q38uvpayzmy6ednxg3h2pksj9xaioc6zzen851ekpecsdr3nuvnm3j8ui3k242d1vpmxjdcziwzxco94jc9tlsmzroejxk37acry32hxfoo57j77c3sp0melnkl\"\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"de1c3061-75b9-41cf-b93a-be90635cd667\", \n\t\t\t\"name\": \"Practical Wooden Chicken\", \n\t\t\t\"lastname\": \"dzcb0yj1td5kmsmlmr8n796glt1ly9sh1g8wowv8m7w76f9qy0ta2bt9dde56w\", \n\t\t\t\"code\": \"cpukpwgqfmabe1ckzj70th7m5nw6990h9spl8uhnmd5yxf0uql9o4e2y0n9k96w5d24yndwtexyu77j75c1n4optkqdqtdwtbr914vvs5vh25dysgzukr13siqn9w9\"\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"1a4494bb-88df-41b5-b7ea-a1be5bf56a31\", \n\t\t\t\"name\": \"Ergonomic Concrete Tuna\", \n\t\t\t\"lastname\": \"vck497ncy2qtl5b4fmvlzkwxtanvs5gh555gyl887ri8ikokydkvxl50ur9nf3\", \n\t\t\t\"code\": \"glwnnvv6abr1tesv9252cr8tiublmxjzjitlx7inckpl9qfwtpk6mucloks4r4xet0okjedmyp848e2ujj5ta0amcj5l5eblu3tbb70sylgen96461ferf0qzp4gyd\"\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"4e844f61-7f3e-4495-8167-898b54f57cd6\", \n\t\t\t\"name\": \"Handcrafted Rubber Towels\", \n\t\t\t\"lastname\": \"qlnndmt65v89h0r68h38w6nrer1u4hcvhofjpw96p5rasj3rswi25bkag2zut1\", \n\t\t\t\"code\": \"p1295b98jph5unzcboakgp44w5eer6gtvz9ernl92fip5bksnxwfowpyzuw3cn3mge4xjylo5jqrmu2eq4kkiepvaow520sztmy5re8piqw1hdwmhownwzil5aa6z2\"\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"d0ce15aa-341c-49d3-b3f6-95b13dd46d3d\", \n\t\t\t\"name\": \"Sleek Frozen Computer\", \n\t\t\t\"lastname\": \"g1gxo4ec4ulyt40oz1ecro3svr7bw2kr7imkjcw8s5vpltidyyfv1gj52llu7r\", \n\t\t\t\"code\": \"y04dvsao6586aczuc8vopwvty5dr2ppf7bzfvwhu6nzg5wthfl8e8kor08ddku8ghcvvkibvgdx8l5a8sq72eq04muws0rsh11hh9wq7r6i9bfnrv4mrww4u107gur\"\n\t\t}, \n\t\t{\n\t\t\t\"id\": \"6d634d20-9333-49a1-8568-b5b0ce09351e\", \n\t\t\t\"name\": \"Unbranded Frozen Table\", \n\t\t\t\"lastname\": \"tecb4ql8es81tobfd2r7gady8wmt2hpjnnnn12qxo97z71e6refq0po6ky442y\", \n\t\t\t\"code\": \"ekpn2h7da8hoc7fv1rzaaqtgtyhianp5gw2koudixeqtfnwfvgiyxao56ijdhv7c5i8wp2i5b79wl60u1u4kxrmizj6syix4wzlbjf5rkq1x2vvy59g7anoqd50akd\"\n\t\t}\n\t]\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - hotelPaginateGuests",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query ($query:QueryStatement $constraint:QueryStatement)\n{\n\thotelPaginateGuests (query:$query constraint:$constraint)\n\t{\n\t\ttotal\n\t\tcount\n\t\trows\n\t}\n}",
+						"variables": "{\n\t\"query\":\n\t{\n\t\t\"offset\": 0,\n\t\t\"limit\": 10\n\t}\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - hotelGetGuests",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query ($query:QueryStatement)\n{\n\thotelGetGuests (query: $query)\n\t{\n\t\tid\n\t\tname\n\t\tlastname\n\t\tcode\n\t\tcreatedAt\n\t\tupdatedAt\n\t}\n}",
+						"variables": "{\n\t\"query\":\n\t{\n\t\t\"where\":\n\t\t{ \n\t\t\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\"\n\t\t}\n\t}\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - hotelFindGuest",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query ($query:QueryStatement)\n{\n\thotelFindGuest (query: $query)\n\t{\n\t\tid\n\t\tname\n\t\tlastname\n\t\tcode\n\t\tcreatedAt\n\t\tupdatedAt\n\t}\n}",
+						"variables": "{\n\t\"query\":\n\t{\n\t\t\"where\":\n\t\t{\n\t\t\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\"\n\t\t}\n\t}\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - hotelFindGuestById",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query ($id:ID)\n{\n\thotelFindGuestById (id:$id)\n\t{\n\t\tid\n\t\tname\n\t\tlastname\n\t\tcode\n\t\tcreatedAt\n\t\tupdatedAt\n\t}\n}",
+						"variables": "{\n\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\"\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - hotelUpdateGuest",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation ($payload:HotelUpdateGuestInput!)\n{\n\thotelUpdateGuest (payload:$payload)\n\t{\n\t\tid\n\t\tname\n\t\tlastname\n\t\tcode\n\t\tcreatedAt\n\t\tupdatedAt\n\t}\n}",
+						"variables": "{\n\t\"payload\":\n\t{\n\t\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\t\"name\": \"Practical Soft Computer\", \n\t\t\"lastname\": \"dbijnf08igit91fyjicfskohcvt2e5jq5fz5nw1cu8va5521xz7p1e0rlcqezx\", \n\t\t\"code\": \"ifqbxmkahzankk7bqwun3j5s6z4anfm776m478q0ve9dq24b46wq1jgjqw46dcsz66bak8mmybjx70nrurn3w6dtgxfvjq39ahz6nsdma52iuj4sp3lh1jfukh9f4x\"\n\t}\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - hotelDeleteGuestById",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation ($id:ID!)\n{\n\thotelDeleteGuestById (id:$id)\n\t{\n\t\tid\n\t\tname\n\t\tlastname\n\t\tcode\n\t\tcreatedAt\n\t\tupdatedAt\n\t}\n}",
+						"variables": "{\n\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\"\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "GraphQL - hotelDeleteGuests",
+			"request": {
+				"method": "POST",
+				"header": [
+                ],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation ($query:QueryStatement)\n{\n\thotelDeleteGuests (query: $query)\n\t{\n\t\tid\n\t\tname\n\t\tlastname\n\t\tcode\n\t\tcreatedAt\n\t\tupdatedAt\n\t}\n}",
+						"variables": "{\n\t\"query\":\n\t{\n\t\t\"where\":\n\t\t{\n\t\t\t\"id\":\n\t\t\t{\n\t\t\t\t\"[substring]\": \"\"\n\t\t\t}\n\t\t}\n\t}\n}"
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/graphql",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - hotel/guest/create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key"   : "Content-Type",
+						"name"  : "Content-Type",
+						"type"  : "text",
+						"value" : "application/json"
+					}				],
+				"body": {
+					"mode"  : "raw",
+					"raw"   : "{\n\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\"name\": \"Awesome Cotton Shirt\", \n\t\"lastname\": \"4v83j635vssvs10sz4nlui04rjh2yajh3fm552fv8uieef1gpbwszxnszyci14\", \n\t\"code\": \"v88qwea5ejaz7eymkf7ynqey891qyixzbgln0eecr5qormso0xwg8h1qn2uc44gwq3wd6kr527hponm0qu81xevakrshl05af3479jdw1eba2lnskjr7idpwiq2tcx\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/hotel/guest/create",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"hotel",
+						"guest",
+                        "create"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - hotel/guests/create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key"   : "Content-Type",
+						"name"  : "Content-Type",
+						"type"  : "text",
+						"value" : "application/json"
+					}				],
+				"body": {
+					"mode"  : "raw",
+					"raw"   : "[\n\t{\n\t\t\"id\": \"c2adc642-b6ab-4e65-a6aa-335016254348\", \n\t\t\"name\": \"Incredible Concrete Gloves\", \n\t\t\"lastname\": \"feoji4p5b77pxymsrbs29jo6q3458wix3vilg0p0foox25hp5ionaakblgdayf\", \n\t\t\"code\": \"6zbmhcvtjjv7h18wnmfhwcxh5e1fvqnerrg5b89uxqkw4cb7bv2t5cxqxtld1n4cbsq8m7vrzgn1nyuzaqoq32n457pwla63bzkhyp8d8di5kzy7qa89yg6ykqxpp9\"\n\t}, \n\t{\n\t\t\"id\": \"22854e22-6ed4-4c2a-bb81-4a8a31933f7b\", \n\t\t\"name\": \"Small Cotton Table\", \n\t\t\"lastname\": \"qb0wyy8oxz5z7rgqhmvllkwuvnkusjvje97a1rbmw3l87bn8cwk3sn7o1wuztm\", \n\t\t\"code\": \"kvzvnxhr7gjpu2n3sau0abh4y2zarrl2yong57c0ikj7j61s4qrzhaqisnzmzvzjf0do8k482t1jmi6kebyw9mfmbbfzq3novi08qddeegjl8vidi7qy15yos06cgr\"\n\t}, \n\t{\n\t\t\"id\": \"e111f926-db36-45fe-a73c-99a8c2d1e403\", \n\t\t\"name\": \"Incredible Fresh Shirt\", \n\t\t\"lastname\": \"rxukceh5go7z76m7ngd1m8wpvcxvcgjl12malto9uwpjr4aelb4bimzmw5fd2q\", \n\t\t\"code\": \"sekzlmd29csaazg1slujxvuzjdgm8fu9pvi6r9hqvzi3xg8j6biqsvumirrwyq4wg7k7hpe93d4u6ya0665uvo70w9ms2pjegyl2zb9opseca3h62nc1hsl7solarr\"\n\t}, \n\t{\n\t\t\"id\": \"219c80d1-d3d8-44d2-a5e1-f0fdfeff62a4\", \n\t\t\"name\": \"Unbranded Metal Cheese\", \n\t\t\"lastname\": \"8acb3hmgmtr4jfg4p727nhlxtzg8hyh362jxivli6pxxcq77z9xebqp2f30m49\", \n\t\t\"code\": \"7rc6emb37fy3r2r8g463n7rpi2i3sf3vy6hyo4p1qo9hs8rlrzknfym1148nmrd1ybzigrg1vktd3hdwum8o5hibfzbpw89t678mryej95k818u14di3ibckbh5xxz\"\n\t}, \n\t{\n\t\t\"id\": \"593764c7-8b8b-47ab-a4e5-f036e07d3048\", \n\t\t\"name\": \"Handmade Plastic Pants\", \n\t\t\"lastname\": \"z06sp4scjany43r19n7xc5ew2a37u31gl79jin0txb9pqfkzttn65slpla6kb8\", \n\t\t\"code\": \"v6181791rfn7n0mpu1wubc7ivvte3vstrrvdv86byamy0kvmmbhll2h3gs4ift5tdxhsya0ipdsse66pwsub6ghhjfed45j1lo58h26pbirpt9b7vpx3bhurnesanf\"\n\t}, \n\t{\n\t\t\"id\": \"a8c58cb0-befa-4121-ae82-65b59cdc71ac\", \n\t\t\"name\": \"Awesome Rubber Hat\", \n\t\t\"lastname\": \"k8c3zr1pdpv3k4wrzlyz9dvjkoecp1rxgdn7fwn0nokk44f71ojk11td0t88l1\", \n\t\t\"code\": \"502frfw6fk8m0ny0jlit9b6yvg2j4yaewonqyz6wwdvwxfg3l56dkcufprdrbt111tm2uputq7g1t8ggo4ak09qzqubugcl5i6642tun7kr9djxrmg0pi1g6f0ufoz\"\n\t}, \n\t{\n\t\t\"id\": \"bc587872-e392-4dd9-b0a8-7c9707fdaf1d\", \n\t\t\"name\": \"Fantastic Rubber Chair\", \n\t\t\"lastname\": \"9isk6xpijt0b6kddl4hh1vfs5bj287qmq9kstq4b00a2oy6t5ssh6zj9xvfwwh\", \n\t\t\"code\": \"gtikuc1lec2b5pwoed0w2qvdeg0aloaqw50stqxkb2h0mrp358ngyc1lakb1kx3mwt2oyytz0vrdhg11m8g7fgpfxav9ddpd58v7m1tubqbfd9gu44rob8oo6t2k0r\"\n\t}, \n\t{\n\t\t\"id\": \"c3c11636-f99d-4fb2-b3f2-c6a3bbfb3687\", \n\t\t\"name\": \"Handcrafted Concrete Fish\", \n\t\t\"lastname\": \"vv1guht07f0mscbk9ven1q8d5nnztmttq3dviihl19ubyny2evgfpavejux8lp\", \n\t\t\"code\": \"l1hmrlak79jzew305pgljx7cct959e6j3l3u4cv8mnfpn4ida860es7surzlie9filw6917aqefevrzw2uae67r66u2a9v32dodrxvl3q3ooekez32r7a5ftfhxqvf\"\n\t}, \n\t{\n\t\t\"id\": \"0bab2e11-a425-4e1f-8df2-845ebeb145b1\", \n\t\t\"name\": \"Refined Plastic Bike\", \n\t\t\"lastname\": \"h1uaj08s689j838p8q7wbfzs33ryq7mifaicp4y56y4bbz1fw077ilzpq32xce\", \n\t\t\"code\": \"s5vqtobzccl62kw22rqs0sf2uc2xox4tw4jtvgpu66ra9740hbhrzma8ezhm7r3sctq2radsatu5wx43oml4xy3nb4e2ecsmcosi26udtr7i47zai8v13vsilp742z\"\n\t}, \n\t{\n\t\t\"id\": \"ec10147f-77c9-485d-a957-9205a322c2fd\", \n\t\t\"name\": \"Generic Rubber Chicken\", \n\t\t\"lastname\": \"d6jdh01wcsypwnj6qxe6zki690nbgbvwb0g3qwzwdmyygfrv9mrkmk8bch7j5y\", \n\t\t\"code\": \"d8n80f2djwm09957pp8674e6hheb9j9gcxof6s7bno0v4pbl12b1pl3dt2hy8tlp7z3i9cpfsne4i2bbiwyjp2zn8vmewm3jzd76qwoe7y3yjqq58p1reas3q54k1e\"\n\t}\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/hotel/guests/create",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"hotel",
+						"guests",
+                        "create"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - hotel/guests/paginate",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"query\":\n\t{\n\t\t\"offset\": 0,\n\t\t\"limit\": 10\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/hotel/guests/paginate",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"hotel",
+                        "guests",
+                        "paginate"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - hotel/guests/get",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"query\":\n\t{\n\t\t\"where\":\n\t\t{ \n\t\t\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\"\n\t\t}\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/hotel/guests/get",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"hotel",
+						"guests",
+                        "get"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - hotel/guest/find",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"query\":\n\t{\n\t\t\"where\":\n\t\t{\n\t\t\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\"\n\t\t}\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/hotel/guest/find",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"hotel",
+						"guest",
+                        "find"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - hotel/guest/find/{id}",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/hotel/guest/find/5b19d6ac-4081-573b-96b3-56964d5326a8",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"hotel",
+						"guest",
+                        "find",
+						"5b19d6ac-4081-573b-96b3-56964d5326a8"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - hotel/guest/update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}				],
+				"body": {
+					"mode": "raw",
+					"raw"   : "{\n\t\"id\": \"5b19d6ac-4081-573b-96b3-56964d5326a8\", \n\t\"name\": \"Fantastic Rubber Sausages\", \n\t\"lastname\": \"3fh3p2cx2fc93nm8yvx6xg2wjoj3uhhwv3pdzj1ldjwhmp5sea7up5dis9it6d\", \n\t\"code\": \"npq828idxsm1kj0swi0n6sgxop4xz1fk800fud27iptbyeq3l79obcb9du9wpft5kzret9kck96ytngf8lmxnznefbfg90n1v0nb4n83hr2dsurlodbsi8zdvj3464\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/hotel/guest/update",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"hotel",
+						"guest",
+                        "update"
+					]
+				}
+			},
+			"response": []
+        },
+        {
+			"name": "REST - hotel/guest/delete/{id}",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/hotel/guest/delete/5b19d6ac-4081-573b-96b3-56964d5326a8",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"hotel",
+						"guest",
+                        "delete",
+						"5b19d6ac-4081-573b-96b3-56964d5326a8"
+					]
+				}
+			},
+			"response": []
+		},
+        {
+			"name": "REST - hotel/guests/delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"query\":\n\t{\n\t\t\"where\":\n\t\t{\n\t\t\t\"id\":\n\t\t\t{\n\t\t\t\t\"[substring]\": \"\"\n\t\t\t}\n\t\t}\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/hotel/guests/delete",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"hotel",
+						"guests",
+                        "delete"
+					]
+				}
+			},
+			"response": []
+		}
+    ],
+    "variable": [
+		{
+			"id": "d9bc3afc-fd40-5505-b57f-8f5d5118e01b",
+			"key": "URL",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}
